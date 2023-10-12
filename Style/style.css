@@ -11,6 +11,7 @@
     --CharcoalGrey: hsl(235, 18%, 26%);
     --Grey: hsl(231, 7%, 60%);
     --White: hsl(0, 0%, 100%);
+    --TomatoSecondary: hsl(346, 100%, 66%);
 }
 
 /* style in mobile */
@@ -18,41 +19,166 @@
     display: none;
 }
 
-.subscribe {
-    display: none;
-}
-
 /* end */
 
 body {
-    height: 100vh;
-    background-color: var(--DarkSlateGrey);
+    height: 620px;
+    background-color: var(--CharcoalGrey);
     display: grid;
     place-items: center;
     place-content: center;
 }
 
-.hero-section{
-    width: 50rem;
-    height: 30rem;
+.hero-section {
+    width: 45rem;
+    height: 29rem;
     background-color: var(--White);
     border-radius: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    place-content: center;
+}
+
+.right-side {
+    position: relative;
+    left: 1rem;
+}
+
+.left-side {
+    position: relative;
+    left: 3rem;
+}
+
+.headline {
+    position: relative;
+    top: -1rem;
+}
+
+.desktop-img {
+    width: 18rem;
+}
+
+.headline h1 {
+    color: var(--DarkSlateGrey);
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 2;
+}
+
+p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    width: 90%;
+    color: var(--DarkSlateGrey);
+}
+
+.discription-inner {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 1rem;
+    padding-bottom: 10px;
 }
 
-
-.desktop-img{
-    width: 70%;
+.btn {
+    padding: 0.7rem 1rem;
+    border-radius: 0.5rem;
 }
 
-.headline h1{
-    font-size: 3rem;
+button {
+    width: 90%;
+    cursor: pointer;
+    border: none;
+    font-weight: 700;
+    color: var(--White);
+    background-color: var(--DarkSlateGrey);
 }
 
-.discription-inner{
+button:focus-visible,
+button:hover {
+    background: linear-gradient(90deg,
+            var(--TomatoSecondary),
+            var(--Tomato));
+    box-shadow: 0 1rem 2.5rem -0.5rem var(--Tomato);
+}
+
+.input {
+    width: 90%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 0.063rem solid var(--Grey);
+    border-radius: 0.5rem;
+    outline: none;
+    font-weight: inherit;
+    color: inherit;
+}
+
+.input:focus {
+    border-color: var(--DarkSlateGrey);
+}
+
+form {
+    position: relative;
+    top: 1rem;
+}
+
+/* .subscribe {
+    
+} */
+
+.thanks {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 4rem 4rem;
+    text-align: center;
+    width: 30rem;
+    height: 25rem;
+    background-color: var(--White);
+    border-radius: 20px;
+}
+
+.thanks img{
+    margin: 2rem;
+}
+
+.thanks h2{
+    margin-bottom: 1rem;
+}
+
+.thanks p{
+    margin-bottom: 1rem;
+}
+
+.email-value {
+    font-weight: 700;
+}
+
+
+
+.hidden {
+    display: none !important;
+}
+
+
+.label,
+.error-text {
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+
+.error-text {
+    grid-area: item-2;
+    text-align: right;
+    color: var(--Tomato);
+}
+
+.error-input {
+    border-color: var(--Tomato) !important;
+    /* background-color: var(--Tomato) !important; */
+    color: var(--Tomato) !important;
 }
 
 .attribution {
@@ -63,3 +189,50 @@ body {
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
+
+@media only screen and (max-width: 600px) {
+    /* body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 1.5rem;
+      background-color: var(--DarkSlateGrey);
+    }
+  
+    .card {
+      background-color: var(--White);
+      border-radius: 2.25rem;    
+    }
+
+    .top-mobile{
+        display: block;
+    }
+    
+    .right-side{
+        display: none;
+    }
+    .hero-section {
+      display: flex;
+      flex-direction: row;
+      gap: 1.5rem;
+      max-width: 20rem;
+      padding: 1.5rem;
+    }
+  
+    .img-wrapper {
+      width: auto;
+    }
+  
+    .content {
+      max-width: 23.5rem;
+      margin: 1rem 2.5rem;
+    }
+  
+    .thanks {
+      align-items: flex-start;
+      max-width: 31.5rem;
+      text-align: left;
+    } */
+  }
