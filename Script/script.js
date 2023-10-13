@@ -43,6 +43,5 @@ document.addEventListener("DOMContentLoaded", function () {
       thanks.classList.add("hidden");
       hero.classList.remove('hidden')
     });
+ 
   });
-  
-jkj
