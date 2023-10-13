@@ -139,15 +139,15 @@ form {
     border-radius: 20px;
 }
 
-.thanks img{
+.thanks img {
     margin: 2rem;
 }
 
-.thanks h2{
+.thanks h2 {
     margin-bottom: 1rem;
 }
 
-.thanks p{
+.thanks p {
     margin-bottom: 1rem;
 }
 
@@ -191,48 +191,51 @@ form {
 }
 
 @media only screen and (max-width: 600px) {
-    /* body {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 1.5rem;
-      background-color: var(--DarkSlateGrey);
-    }
-  
-    .card {
-      background-color: var(--White);
-      border-radius: 2.25rem;    
+    body {
+        background-color: var(--White);
     }
 
-    .top-mobile{
-        display: block;
+    .top-mobile img{
+        width: 100%;
     }
-    
-    .right-side{
+
+    .top-mobile {
+        display: block;
+        
+    }
+
+    .right-side {
         display: none;
     }
+
     .hero-section {
-      display: flex;
-      flex-direction: row;
-      gap: 1.5rem;
-      max-width: 20rem;
-      padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 99%;
+        height: 100vh;
+        position: relative;
+        top: -1.5rem;
     }
-  
-    .img-wrapper {
-      width: auto;
+
+    .left-side {
+        position: relative;
+        left: 0.5rem;
+        width: inherit;
     }
-  
-    .content {
-      max-width: 23.5rem;
-      margin: 1rem 2.5rem;
+
+    p {
+        width: 75%;
     }
-  
+
     .thanks {
-      align-items: flex-start;
-      max-width: 31.5rem;
-      text-align: left;
-    } */
-  }
+        width: 100%;
+        margin: 5rem 2rem;
+    }
+
+    .discription-inner {
+        justify-content: start;
+        gap: 1rem;
+        padding-bottom: 10px;
+    }
+}
